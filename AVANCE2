@@ -1,0 +1,141 @@
+
+#include <iostream>
+#include <string>
+#include <cstdio>
+#include <stdio.h>
+#include <windows.h>
+#include <conio.h>
+#include <locale.h>
+
+using namespace std;
+
+int menu(void){
+
+printf("\n  MENU DE OPCIONES \n");
+printf("======================\n");
+printf("1.- Agregar articulo \n");
+printf("2.- Modificar articulo \n");
+printf("3.- Eliminar articulo \n");
+printf("4.- Lista de articulos \n");
+printf("5.- Limpiar pantalla \n");
+printf("6.- Salir \n");
+printf("======================\n");
+cout<<"Selecciona una opcion: ";
+
+}
+
+int main(){
+
+int opc , opc2 , i = 0 , max = 4;
+string numero[4] , nombre[4] , lanzamiento[4] , consola[4] , carac[4] , descrip[4] , genero[4] , clasif[4] , precio[4];
+
+do{
+
+menu();
+cin>>opc;
+
+setlocale(LC_CTYPE, "Spanish");
+
+switch(opc){
+
+case 1: // AGREGAR ARTICULO
+
+system ("cls");
+i++;
+
+cout<<"Ingrese el numero: "<<endl;
+cin>>numero[i];
+
+cout<<"Ingrese el nombre: "<<endl;
+cin>>nombre[i];
+
+cout<<"Ingrese el año de lanzamiento: "<<endl;
+cin>>lanzamiento[i];
+
+cout<<"Ingrese la clasificacion: "<<endl;
+cin>>clasif[i];
+
+cout<<"Ingrese las caracteristicas: "<<endl;
+cin>>carac[i];
+
+cout<<"Ingrese la descripcion: "<<endl;
+cin>>descrip[i];
+
+cout<<"Ingrese el genero: "<<endl;
+cin>>genero[i];
+
+cout<<"Ingrese la consola: "<<endl;
+cin>>consola[i];
+
+cout<<"Ingrese el precio unitario: "<<endl;
+cin>>precio[i];
+
+cout<<"\n  PRESIONE 1 PARA VOLVER AL MENU  \n";
+cin>>opc2;
+
+system ("cls");
+break;
+
+case 2: // MODIFICAR ARTICULO
+break;
+
+case 3: // ELIMINAR ARTICULO
+break;
+
+case 4: // LISTA DE ARTICULOS VIGENTES
+
+system ("cls");
+
+for( i=1; i<max; i++){
+
+cout<<"\n NUMERO: "<<numero[i]<<endl;
+
+cout<<"\n NOMBRE: "<<nombre[i]<<endl;
+
+cout<<"\n LANZAMIENTO: "<<lanzamiento[i]<<endl;
+
+cout<<"\n CLASIFICACION: "<<clasif[i]<<endl;
+
+cout<<"\n CARACTERISTICAS: "<<carac[i]<<endl;
+
+cout<<"\n DESCRIPCION: "<<descrip[i]<<endl;
+
+cout<<"\n GENERO: "<<genero[i]<<endl;
+
+cout<<"\n CONSOLA: "<<consola[i]<<endl;
+
+cout<<"\n PRECIO: "<<precio[i]<<endl;
+
+cout<<"\n ==================== \n";
+}
+
+cout<<"\n  PRESIONE 1 PARA VOLVER AL MENU  \n";
+cin>>opc2;
+
+system ("cls");
+break;
+
+case 5: // LIMPIAR PANTALLA
+
+   system ("cls");
+   break;
+   
+case 6: // SALIR
+   
+   system("cls");
+   cout<<"\n GRACIAS POR UTILIZAR EL PROGRAMA <3 \n";
+   system("pause");
+   break;
+   
+default:
+
+   cout<<"\n HA INGRESADO UNA OPCION INCORRRECTA \n"<<endl;
+   
+   cout<<"\n  PRESIONE 1 PARA VOLVER AL MENU  \n";
+   break;
+}
+
+}while(opc2 == 1);
+
+return 0;
+}
